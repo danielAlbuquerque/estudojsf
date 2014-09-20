@@ -20,7 +20,7 @@ public class TipoEndereco implements Serializable{
     @Id
     @GeneratedValue
     @Column(name="IdTipoEndereco", nullable = false)
-    private Integer idTipoLogradouro;
+    private Integer idTipoEndereco;
     
     @Column(name="nome", nullable = false, length = 30)
     private String nome;
@@ -33,11 +33,11 @@ public class TipoEndereco implements Serializable{
     }
 
     public Integer getIdTipoLogradouro() {
-        return idTipoLogradouro;
+        return idTipoEndereco;
     }
 
     public void setIdTipoLogradouro(Integer idTipoLogradouro) {
-        this.idTipoLogradouro = idTipoLogradouro;
+        this.idTipoEndereco = idTipoLogradouro;
     }
 
     public String getNome() {
@@ -59,7 +59,7 @@ public class TipoEndereco implements Serializable{
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + (this.idTipoLogradouro != null ? this.idTipoLogradouro.hashCode() : 0);
+        hash = 89 * hash + (this.idTipoEndereco != null ? this.idTipoEndereco.hashCode() : 0);
         return hash;
     }
 
@@ -72,7 +72,7 @@ public class TipoEndereco implements Serializable{
             return false;
         }
         final TipoEndereco other = (TipoEndereco) obj;
-        if (this.idTipoLogradouro != other.idTipoLogradouro && (this.idTipoLogradouro == null || !this.idTipoLogradouro.equals(other.idTipoLogradouro))) {
+        if (this.idTipoEndereco != other.idTipoEndereco && (this.idTipoEndereco == null || !this.idTipoEndereco.equals(other.idTipoEndereco))) {
             return false;
         }
         return true;
